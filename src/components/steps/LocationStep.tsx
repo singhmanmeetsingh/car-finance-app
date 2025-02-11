@@ -51,7 +51,7 @@ interface FormErrors {
 
 export function LocationStep() {
   // Get form context
-  const { formState, setFormState, nextStep } = useForm();
+  const { formState, setFormState, nextStep, prevStep } = useForm();
 
   // Local state for form data and errors
   const [formData, setFormData] = useState({
@@ -134,6 +134,9 @@ export function LocationStep() {
       setFormState({ location: formData });
       nextStep();
     }
+  };
+  const handleGoBack = () => {
+    setTimeout(prevStep, 300);
   };
 
   return (
@@ -242,10 +245,19 @@ export function LocationStep() {
         </Card>
 
         {/* Submit Button */}
-        <motion.div variants={formElementVariants}>
+        <motion.div variants={formElementVariants} className='flex flex-col sm:flex-row gap-4'>
+          <Button
+
+            onClick={() => handleGoBack()}
+            className="w-full sm:w-1/2 bg-red-500 hover:bg-red-600 text-white py-6 text-lg font-semibold"
+          >
+            Go Back
+          </Button>
+
+
           <Button
             type="submit"
-            className="w-full bg-red-500 hover:bg-red-600 text-white py-6 text-lg font-semibold"
+            className="w-full sm:w-1/2 bg-red-500 hover:bg-red-600 text-white py-6 text-lg font-semibold"
           >
             Get Your Offers
           </Button>
