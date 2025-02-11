@@ -146,7 +146,7 @@ export function LocationStep() {
     >
       {/* Header Section */}
       <motion.div variants={formElementVariants} className="text-center mb-8">
-        <h2 className="text-2xl font-semibold">You're Almost Done!</h2>
+        <h2 className="text-2xl font-semibold">You&apos;re Almost Done!</h2>
         <h3 className="text-xl mt-4">Where are you located?</h3>
         <p className="text-gray-600 mt-2">
           Let us know your address so we can find the best vehicles in your area

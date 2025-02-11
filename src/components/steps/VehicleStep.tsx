@@ -106,7 +106,7 @@ export function VehicleStep() {
         className="text-center"
       >
         <h2 className="text-2xl font-semibold mb-2">What are you looking for?</h2>
-        <p className="text-gray-500">Select the type of vehicle you're interested in</p>
+        <p className="text-gray-500">Select the type of vehicle you&apos;re interested in</p>
       </motion.div>
 
       {/* Vehicle Selection Grid */}

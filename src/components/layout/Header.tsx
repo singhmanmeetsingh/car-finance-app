@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image"
-export const Header = (props: {}) => {
+// export const Header = (props: {}) => {
+export const Header = () => {
   return (
     <header className="bg-white shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-4">

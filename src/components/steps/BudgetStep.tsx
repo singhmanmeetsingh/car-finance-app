@@ -74,7 +74,7 @@ export function BudgetStep() {
       className="space-y-8"
     >
       <motion.div variants={itemVariants} className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">What's Your Budget</h2>
+        <h2 className="text-2xl font-semibold mb-4">What&apos;s Your Budget</h2>
         <div className="text-3xl font-bold text-red-500">
           {formatBudget(formState.budget)} / Month
         </div>
@@ -106,7 +106,7 @@ export function BudgetStep() {
         variants={itemVariants}
         className="grid grid-cols-2 md:grid-cols-4 gap-4"
       >
-        {qualifications.map((qual, index) => (
+        {qualifications.map((qual) => (
           <motion.div
             key={qual.text}
             variants={itemVariants}

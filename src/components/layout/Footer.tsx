@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const Footer = (props: {}) => {
+// export const Footer = (props: {}) => {
+export const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t">
       <div className="max-w-6xl mx-auto px-4 py-4">

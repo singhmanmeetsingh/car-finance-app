@@ -26,9 +26,9 @@ const Slider = React.forwardRef<
   ...props
 }, ref) => {
   // Calculate the percentage for positioning the value label
-  const getPercentage = (value: number) => {
-    return ((value - min) / (max - min)) * 100;
-  };
+  // const getPercentage = (value: number) => {
+  //   return ((value - min) / (max - min)) * 100;
+  // };
 
   return (
     <SliderPrimitive.Root
