@@ -67,7 +67,7 @@ export function ThankYouStep() {
       <motion.div variants={itemVariants}>
         <p className="text-lg text-gray-600 mb-8">
           A complete copy of your application has been assigned to a<br />
-          <span className="font-semibold">401 Auto Financing Credit Specialist</span> who will contact you<br />
+          <span className="font-semibold">Get Your Car Approved Credit Specialist</span> who will contact you<br />
           shortly
         </p>
       </motion.div>
