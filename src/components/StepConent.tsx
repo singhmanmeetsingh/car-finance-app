@@ -5,7 +5,8 @@ import { useForm } from '@/context/FormContext';
 import { BudgetStep } from './steps/BudgetStep';
 import { VehicleStep } from './steps/VehicleStep';
 import { LocationStep } from './steps/LocationStep';
-// import { GetOffersStep } from './steps/GetOffersStep';
+import { GetOffersStep } from './steps/GetOffersStep';
+import { ThankYouStep } from './steps/ThankYouStep';
 
 export function StepContent() {
   const { formState } = useForm();
@@ -15,7 +16,8 @@ export function StepContent() {
       {formState.step === 1 && <BudgetStep key="budget" />}
       {formState.step === 2 && <VehicleStep key="vehicle" />}
       {formState.step === 3 && <LocationStep key="location" />}
-      {/* {formState.step === 4 && <GetOffersStep key="offers" />} */}
+      {formState.step === 4 && <GetOffersStep key="offers" />}
+      {formState.step === 5 && <ThankYouStep key="thankyou" />}
     </AnimatePresence>
   );
 }
