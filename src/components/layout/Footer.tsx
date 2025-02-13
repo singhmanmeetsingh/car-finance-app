@@ -1,18 +1,22 @@
 import React from 'react'
 import Image from 'next/image';
 import BMO from "@/assets/images/banks/BMO.svg"
+import TD from "@/assets/images/banks/TD.svg"
+import RBC from "@/assets/images/banks/RBC.svg"
+import Scotia from "@/assets/images/banks/Scotia.svg"
+import CIBC from "@/assets/images/banks/CIBC.svg"
 
 // export const Footer = (props: {}) => {
 export const Footer = () => {
   const banks = [
     { id: 1, src: BMO, alt: 'Bank 1', width: 100 },
-  ]// const banks = [
-  //   { id: 1, src: '/images/banks/BMO.svg', alt: 'Bank 1', width: 100 },
-  //   { id: 2, src: '/images/banks/TD.svg', alt: 'Bank 2', width: 100 },
-  //   { id: 3, src: '/images/banks/RBC.svg', alt: 'Bank 3', width: 100 },
-  //   { id: 4, src: '/images/banks/Scotia.svg', alt: 'Bank 4', width: 100 },
-  //   { id: 5, src: '/images/banks/CIBC.svg', alt: 'Bank 5', width: 100 },
-  // ];
+    { id: 2, src: TD, alt: 'Bank 2', width: 100 },
+    { id: 3, src: RBC, alt: 'Bank 3', width: 100 },
+    { id: 4, src: Scotia, alt: 'Bank 4', width: 100 },
+    { id: 5, src: CIBC, alt: 'Bank 5', width: 100 },
+  ]
+
+
   return (
     <footer className="bg-gray-50 border-t">
       <div className="max-w-6xl mx-auto px-4 py-8">
