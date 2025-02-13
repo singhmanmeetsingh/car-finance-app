@@ -3,7 +3,8 @@
 import * as React from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import { cn } from "@/lib/utils";
-
+import Image from "next/image";
+import BMO from "@/assets/images/slider_thumb/sup.png"
 // Define the props that our slider can accept
 interface SliderProps extends React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> {
   // Add formatLabel function to customize the label display
@@ -49,26 +50,49 @@ const Slider = React.forwardRef<
       </SliderPrimitive.Track>
 
       {/* Slider Thumb */}
+      {/* {props.defaultValue?.map((value, index) => ( */}
+      {/*   <SliderPrimitive.Thumb */}
+      {/*     key={index} */}
+      {/*     className={cn( */}
+      {/*       "block h-5 w-5 rounded-full border-2 border-red-500 bg-white", */}
+      {/*       "focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500", */}
+      {/*       "disabled:pointer-events-none disabled:opacity-50", */}
+      {/*       "transition-all hover:scale-110" */}
+      {/*     )} */}
+      {/*   > */}
+      {/*     {showLabel && ( */}
+      {/*       <div */}
+      {/*         className={cn( */}
+      {/*           "absolute -top-8 left-1/2 -translate-x-1/2", */}
+      {/*           "bg-red-500 text-white px-2 py-1 rounded text-sm", */}
+      {/*           "opacity-0 transition-opacity", */}
+      {/*           "group-hover:opacity-100" */}
+      {/*         )} */}
+      {/*       > */}
+      {/*         {formatLabel(value)} */}
+      {/*       </div> */}
+      {/*     )} */}
+      {/*   </SliderPrimitive.Thumb> */}
+      {/* ))} */}
       {props.defaultValue?.map((value, index) => (
         <SliderPrimitive.Thumb
           key={index}
-          className={cn(
-            "block h-5 w-5 rounded-full border-2 border-red-500 bg-white",
-            "focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500",
-            "disabled:pointer-events-none disabled:opacity-50",
-            "transition-all hover:scale-110"
-          )}
+          className="relative block h-16 w-16 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:pointer-events-none disabled:opacity-50 transition-all hover:scale-110"
         >
-          {/* Value Label */}
+          <Image
+            src={BMO}
+            alt="slider thumb"
+            width={48}
+            height={48}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-contain scale-x-[-1]"
+          />
           {showLabel && (
-            <div
-              className={cn(
-                "absolute -top-8 left-1/2 -translate-x-1/2",
-                "bg-red-500 text-white px-2 py-1 rounded text-sm",
-                "opacity-0 transition-opacity",
-                "group-hover:opacity-100"
-              )}
-            >
+            <div className={cn(
+              "absolute -top-8 left-1/2 -translate-x-1/2",
+              "bg-red-500 text-white px-2 py-1 rounded text-sm",
+              "opacity-0 transition-opacity",
+              "group-hover:opacity-100"
+            )}>
               {formatLabel(value)}
             </div>
           )}
