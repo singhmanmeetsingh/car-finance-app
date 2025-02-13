@@ -16,7 +16,7 @@ export const Footer = () => {
         {/* Partners Section */}
         <div className="mb-8">
           <p className="text-center text-sm text-gray-400 mb-6 tracking-wide uppercase">
-            Banking Partners
+            Trusted by the industry leaders
           </p>
           <div className="flex justify-center items-center space-x-12">
             {banks.map((partner) => (
@@ -27,6 +27,7 @@ export const Footer = () => {
                   width={partner.width}
                   height={24}
                   className="h-6 w-auto"
+                  unoptimized
                 />
               </div>
             ))}
